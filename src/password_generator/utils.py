@@ -24,6 +24,18 @@ class Keys:
 
 
 def load_password_database(root_dir: str, db_name: str) -> dict[str, dict[str, Any]]:
+    """_summary_
+
+    Args:
+        root_dir (str): _description_
+        db_name (str): _description_
+
+    Raises:
+        FileNotFoundError: _description_
+
+    Returns:
+        dict[str, dict[str, Any]]: _description_
+    """
     path = os.path.join(root_dir, db_name)
     if not os.path.exists(path):
         raise FileNotFoundError(
